@@ -1,0 +1,35 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W20261021 09:53:44.657871 1875800064 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+W20261021 09:53:44.658186 1875800064 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+W20261021 09:53:44.658324 1875800064 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+W20261021 09:53:44.659464 1875800064 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+DATA {"raw_path": "/Users/home/workspace/School/DataMining/project/NfipClaimsV3.parquet", "raw_bytes": 163839193, "rows": 276570, "python": "3.13.9", "sklearn": "1.7.2", "numpy": "2.3.5", "pandas": "2.3.3", "seed": 42, "target_cutoff_train_2020_2023": 84724.20000000001, "target_cutoff_all_years": 106127.0, "old_label_disagreements_with_train_cutoff": 16780, "unknown_building_payments": 21558, "unknown_payment_positive_net": 0, "paid_above_building_coverage": 665, "selection_protocol": "two forward folds: <=2021 -> 2022 and <=2022 -> 2023; choose mean validation dollar R2; refit <=2023; test 2024-25", "limitations": ["cohort uses existing deduplication keys; snapshot features are not point-in-time verified", "2024-25 already inspected in historical notebooks; this is an audited retrospective comparison, not a fresh prospective holdout"]}
+              model  r2_dollars  mae_dollars  median_error_dollars  rmse_dollars
+    training_median     -0.1751   72976.4733            32290.7350   154837.5419
+      training_mean     -0.0243   68728.5131            52833.4583   144562.6675
+ original_ridge_log      0.1829   58872.5285            31871.8373   129110.8417
+original_poisson_15     -0.0589   57035.8027            30378.1052   146981.9485
+VALIDATION {'fit_through': 2021, 'validation_year': 2022, 'model': 'direct_poisson', 'r2_dollars': 0.022042668568013846, 'mae_dollars': 78694.52798021739, 'median_error_dollars': 32536.549433498527, 'rmse_dollars': 236603.98188667017}
+VALIDATION {'fit_through': 2021, 'validation_year': 2022, 'model': 'direct_squared', 'r2_dollars': 0.023279867634377616, 'mae_dollars': 78779.97153180107, 'median_error_dollars': 34004.85958097002, 'rmse_dollars': 236454.27245888257}
+VALIDATION {'fit_through': 2021, 'validation_year': 2022, 'model': 'coverage_ratio_squared', 'r2_dollars': -9.897937258382534, 'mae_dollars': 117530.62534015422, 'median_error_dollars': 43474.748186173456, 'rmse_dollars': 789831.131210874}
+VALIDATION {'fit_through': 2021, 'validation_year': 2022, 'model': 'coverage_ratio_poisson', 'r2_dollars': 0.025991461293573548, 'mae_dollars': 82163.97114688865, 'median_error_dollars': 35410.46520702013, 'rmse_dollars': 236125.81934840712}
+VALIDATION {'fit_through': 2021, 'validation_year': 2022, 'model': 'log_squared', 'r2_dollars': -0.0710759428076273, 'mae_dollars': 87110.82173863213, 'median_error_dollars': 37116.38041251493, 'rmse_dollars': 247612.30800335854}
+VALIDATION {'fit_through': 2021, 'validation_year': 2022, 'model': 'direct_squared_coords', 'r2_dollars': -0.009573873809646916, 'mae_dollars': 83987.52589800002, 'median_error_dollars': 35018.46580660147, 'rmse_dollars': 240398.16451803973}
+VALIDATION {'fit_through': 2022, 'validation_year': 2023, 'model': 'direct_poisson', 'r2_dollars': 0.29780723734902714, 'mae_dollars': 33915.21127487921, 'median_error_dollars': 20495.543053805042, 'rmse_dollars': 59199.66653675662}
+VALIDATION {'fit_through': 2022, 'validation_year': 2023, 'model': 'direct_squared', 'r2_dollars': 0.03660950776447591, 'mae_dollars': 36433.928808025754, 'median_error_dollars': 22705.3634574225, 'rmse_dollars': 69341.34540873139}
+VALIDATION {'fit_through': 2022, 'validation_year': 2023, 'model': 'coverage_ratio_squared', 'r2_dollars': -107.19094483067053, 'mae_dollars': 61750.17776659544, 'median_error_dollars': 30199.281128193063, 'rmse_dollars': 734829.431946939}
+VALIDATION {'fit_through': 2022, 'validation_year': 2023, 'model': 'coverage_ratio_poisson', 'r2_dollars': -255.51544338480028, 'mae_dollars': 103789.13875099113, 'median_error_dollars': 52628.065227160114, 'rmse_dollars': 1131482.5076293247}
+VALIDATION {'fit_through': 2022, 'validation_year': 2023, 'model': 'log_squared', 'r2_dollars': 0.16775500833010926, 'mae_dollars': 34771.857657578694, 'median_error_dollars': 16044.248009480252, 'rmse_dollars': 64449.07389050407}
+VALIDATION {'fit_through': 2022, 'validation_year': 2023, 'model': 'direct_squared_coords', 'r2_dollars': 0.13742359676265903, 'mae_dollars': 34986.273677668454, 'median_error_dollars': 20924.302299356706, 'rmse_dollars': 65612.996569859}
+FINAL REGRESSION     scope          model     n  r2_dollars  mae_dollars  median_error_dollars  rmse_dollars
+ National direct_poisson 93186    0.168736 54185.914963          29814.287331 130227.599847
+  Florida direct_poisson 67026    0.141348 61008.013213          35237.136421 148144.669882
+     Gulf direct_poisson  8133    0.102515 35340.471963          23035.432844  53588.795156
+Northeast direct_poisson  3958    0.273074 28246.295766          15283.278941  53866.331230
+     2024 direct_poisson 82729    0.162501 56299.397768          31409.524415 136318.962110
+     2025 direct_poisson 10457    0.144236 37465.410138          19724.852640  64141.307536
+FINAL CLASSIFICATION          model                  variant  threshold  prevalence  roc_auc  average_precision    brier  log_loss  precision   recall       f1  flagged_share
+unweighted_hgb         uncalibrated_0.5       0.50    0.362116 0.840025           0.735149 0.159131  0.491066   0.763907 0.555398 0.643176       0.263276
+unweighted_hgb           calibrated_0.5       0.50    0.362116 0.840025           0.735149 0.154817  0.475997   0.744063 0.613505 0.672506       0.298577
+unweighted_hgb calibrated_validation_F1       0.23    0.362116 0.840025           0.735149 0.154817  0.475997   0.598010 0.830590 0.695368       0.502951
+DONE 1179.1 seconds

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/Users/home/workspace/School/DataMining/project/NfipClaimsV3.parquet",
+    "bytes": 163839193,
+    "sha256": "22278834a1c402a433a5927135382f65c08dd208a292835ed7b16afcc7ecd9cf"
+  },
+  {
+    "path": "/Users/home/workspace/School/DataMining/nfip_claims_project/notebooks/outputs/nfip_claims_simple_keys.parquet",
+    "bytes": 3244720,
+    "sha256": "600d01d6cd206bb7ff0555ec5e8af9bd18d60c7a6ae9e095a0d9dee352985d04"
+  },
+  {
+    "path": "/Users/home/workspace/School/DataMining/nfip_claims_project/notebooks/outputs/nfip_claims_simple_clean.parquet",
+    "bytes": 17674641,
+    "sha256": "297f93d59ff524a413de24c16f5b7fc45f2258908fec5cb75c839cbd7488da43"
+  },
+  {
+    "path": "/Users/home/workspace/School/DataMining/nfip_claims_project/notebooks/outputs/feature_lists.json",
+    "bytes": 2765,
+    "sha256": "a5f177b7f7f0b085857adbd9eece27be0f04a058c434e144db2fcfb1fb76a7a1"
+  },
+  {
+    "path": "/Users/home/workspace/School/DataMining/nfip_claims_project/notebooks/outputs/simple_feature_lists.json",
+    "bytes": 1923,
+    "sha256": "70211b699e22c57737362e15bff3a3929192c1f07a971911cc2c649ac3dca036"
+  },
+  {
+    "path": "/Users/home/workspace/School/DataMining/nfip_claims_project/scripts/audit_history_encoding.py",
+    "bytes": 1637,
+    "sha256": "a8ee1f28e1a400fd61e885888ce96540d0d0f776b2890d38b1ad946a3b8f4e1a"
+  },
+  {
+    "path": "/Users/home/workspace/School/DataMining/nfip_claims_project/scripts/audit_predictions.py",
+    "bytes": 15805,
+    "sha256": "c69aee37e9430998d9e3721cba5e608785046dde0ec0ebdad667220f085cee3d"
+  },
+  {
+    "path": "/Users/home/workspace/School/DataMining/nfip_claims_project/scripts/audit_supplemental.py",
+    "bytes": 4430,
+    "sha256": "c030e36b9af29bdf86758f07fad3060ac395709f529c36a67efcca4c9a5c32e0"
+  }
+]

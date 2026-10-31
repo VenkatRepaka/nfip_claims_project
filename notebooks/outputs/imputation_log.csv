@@ -1,0 +1,39 @@
+column,strategy,cells filled,why
+amountPaidOnBuildingClaim,structural 0,21568,closed without payment (net payment = 0)
+amountPaidOnContentsClaim,structural 0,21568,closed without payment (net payment = 0)
+amountPaidOnIncreasedCostOfComplianceClaim,structural 0,21568,closed without payment (net payment = 0)
+contentsDamageAmount,structural 0 (+ flag for the rest),62210,policy has no contents coverage
+contentsPropertyValue,structural 0 (+ flag for the rest),61757,policy has no contents coverage
+obstructionType,level 'not_applicable',215578,building not elevated
+obstructionType,level 'unknown',1336,"elevated, type not reported"
+contentsDeductibleCode,level 'no_contents_cov',78604,no contents coverage
+buildingDeductibleCode,level 'no_building_cov',6435,contents-only policy
+contentsDeductibleCode,level 'unknown',7,MAR/MNAR categorical; missingness is informative
+buildingDeductibleCode,level 'unknown',318,MAR/MNAR categorical; missingness is informative
+basementEnclosureCrawlspaceType,level 'unknown',134774,MAR/MNAR categorical; missingness is informative
+locationOfContents,level 'unknown',124243,MAR/MNAR categorical; missingness is informative
+buildingDescriptionCode,level 'unknown',73076,MAR/MNAR categorical; missingness is informative
+causeOfDamage,level 'unknown',3571,MAR/MNAR categorical; missingness is informative
+foundationType,level 'unknown',26164,MAR/MNAR categorical; missingness is informative
+floodEvent,level 'no_named_event',56447,structural: no designated catastrophe
+crsClassCode,lookup: same NFIP community's class (train-year table),22969,every community with data has exactly one CRS class
+crsClassCode,train median by state + crs_unknown flag,59403,community has no CRS record at all
+condominiumCoverageTypeCode,mode (train),347,"< 1% missing, MCAR-plausible"
+replacementCostBasis,mode (train),1613,"< 1% missing, MCAR-plausible"
+numberOfFloorsInTheInsuredBuilding,mode (train),346,"< 1% missing, MCAR-plausible"
+ratedFloodZone,mode (train),53,"< 1% missing, MCAR-plausible"
+state,level 'UNK',0,1 blank state
+numberOfUnits,median (train),2718,"≤ 1% missing, right-skewed"
+totalContentsInsuranceCoverage,median (train),1,"≤ 1% missing, right-skewed"
+latitude,train median county → state → global,1826,location is best predicted by its county
+longitude,train median county → state → global,1826,location is best predicted by its county
+buildingPropertyValue,structural 0,5231,contents-only policy: no insured building to value (observed rows of this kind are 0)
+buildingReplacementCost,structural 0,5231,contents-only policy: no insured building to value (observed rows of this kind are 0)
+buildingPropertyValue,KNN (k=10) (chosen by joint masking) + flag,51749,MNAR-likely block; flag keeps the 'not measured' signal
+buildingReplacementCost,KNN (k=10) (chosen by joint masking) + flag,51319,MNAR-likely block; flag keeps the 'not measured' signal
+waterDepth,iterative (BayesianRidge) (chosen by joint masking) + flag,53998,MNAR-likely block; flag keeps the 'not measured' signal
+interiorWaterDepth,iterative (BayesianRidge) (chosen by joint masking) + flag,100507,MNAR-likely block; flag keeps the 'not measured' signal
+exteriorWaterDepth,KNN (k=10) (chosen by joint masking) + flag,51208,MNAR-likely block; flag keeps the 'not measured' signal
+elevationDifference,NOT imputed; has_elevation_data flag,0,66% missing: use on the EC subset only
+buildingDamageAmount,NOT imputed (RQ2 target),0,never impute a label; rows excluded from RQ2
+contentsDamageAmount / contentsPropertyValue,remaining NaN left + *_missing flag,0,"coverage existed but no adjuster figure (MNAR); post-loss, EDA only"

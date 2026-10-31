@@ -1,0 +1,60 @@
+,true_n,true_%,role,mechanism,evidence
+ficoNumber,277033,100.0,event / time,Discontinued field,100% blank: FICO replaced by Event Designation Number in 2020
+floodCharacteristicsIndicator,277033,100.0,post-loss (adjuster),Discontinued field,100% blank in 2020-2025
+reportedCity,277033,100.0,geography,Redacted (privacy),every value is 'Currently Unavailable'
+mostRecentRecoveryDate,276630,99.85,outcome / leakage,Structural,no recovery happened (identical block with total*Recovery)
+totalSubrogationRecovery,276630,99.85,outcome / leakage,Structural,no recovery happened
+totalIccClaimPmtRecovery,276630,99.85,outcome / leakage,Structural,no recovery happened
+totalContentsClaimPmtRecovery,276630,99.85,outcome / leakage,Structural,no recovery happened
+totalSalvageRecovery,276630,99.85,outcome / leakage,Structural,no recovery happened
+totalBldgClaimPmtRecovery,276630,99.85,outcome / leakage,Structural,no recovery happened
+floodWaterDuration,261438,94.37,post-loss (adjuster),MNAR (likely),rarely measured; recorded mainly when water stayed long enough to matter
+elevationCertificateIndicator,242913,87.68,pre-loss feature,MAR,FEMA: blank = 'not reported'; 84-88% blank under both rating systems
+nonPaymentReasonBuilding,222102,80.17,outcome / leakage,Structural,96% of blanks are paid claims (no reason needed)
+obstructionType,217295,78.44,pre-loss feature,Structural + MAR,99% of blanks are non-elevated buildings (not applicable)
+disasterAssistanceCoverageRequired,184287,66.52,pre-loss feature,MAR (rating system),69% blank on RR2 vs 49% legacy; 99% of observed values are 0
+baseFloodElevation,183917,66.39,pre-loss feature,MAR,"Elevation Certificate block (no EC filed); depends on coverage, KS ≈ 0.15; EC no longer required under RR2"
+elevationDifference,182419,65.85,pre-loss feature,MAR,"Elevation Certificate block (no EC filed); depends on coverage, KS ≈ 0.15"
+nonPaymentReasonContents,179804,64.9,outcome / leakage,Structural,contents paid or not covered
+lowestAdjacentGrade,178695,64.5,pre-loss feature,MAR,"Elevation Certificate block (no EC filed); depends on coverage, KS ≈ 0.15"
+lowestFloorElevation,178015,64.26,pre-loss feature,MAR,"Elevation Certificate block (no EC filed); depends on coverage, KS ≈ 0.15"
+basementEnclosureCrawlspaceType,134956,48.71,pre-loss feature,MAR,"differs by rating method, foundation and year"
+locationOfContents,124573,44.97,pre-loss feature,Structural + MAR,about 63% of blanks are policies without contents coverage
+contentsDamageAmount,107530,38.81,post-loss (adjuster),Structural + MNAR,about 59% no contents coverage; rest = adjuster did not record (paid rate differs)
+contentsReplacementCost,104599,37.76,post-loss (adjuster),Structural + MNAR,same block as contentsDamageAmount
+contentsPropertyValue,104599,37.76,post-loss (adjuster),Structural + MNAR,same block as contentsDamageAmount
+interiorWaterDepth,100909,36.42,post-loss (adjuster),MNAR (likely),not measured when no water entered or no inspection
+eventDesignationNumber,92861,33.52,event / time,Structural,no catastrophe event designated
+crsClassCode,82442,29.76,pre-loss feature,MAR (rating system),64% missing on legacy-rated vs 26% on RR2 claims; recoverable from community (Section 7)
+contentsDeductibleCode,78928,28.49,pre-loss feature,Structural,no contents coverage → no contents deductible
+buildingDescriptionCode,73163,26.41,pre-loss feature,MAR,varies by rating method
+buildingPropertyValue,57345,20.7,post-loss (adjuster),MNAR (likely),adjuster valuation block + recoded zeros
+buildingReplacementCost,56915,20.54,post-loss (adjuster),MNAR (likely),adjuster valuation block + recoded zeros
+floodEvent,56474,20.39,event / time,Structural,"no named event, the claim is a local flood"
+floodZoneCurrent,55968,20.2,pre-loss feature,Structural / MAR,no current-map lookup (co-missing with nfipCommunityNumberCurrent)
+nfipCommunityNumberCurrent,55869,20.17,geography,Structural / MAR,no current-map lookup
+waterDepth,54193,19.56,post-loss (adjuster),MNAR (likely),includes 99 sentinel; missing depth ↔ lower paid rate
+exteriorWaterDepth,51554,18.61,post-loss (adjuster),MNAR (likely),missing when no site measurement
+buildingDamageAmount,32948,11.89,target,MNAR (likely),adjuster valuation block + $1 placeholders; paid rate 3% when blank; never impute (RQ2 target)
+foundationType,26194,9.46,pre-loss feature,MAR (rating system),"code 0 on 93% of legacy-rated claims, 0% of RR2 claims"
+amountPaidOnBuildingClaim,21744,7.85,target,Structural,100% of blanks = closed without payment → 0
+amountPaidOnContentsClaim,21744,7.85,outcome / leakage,Structural,closed without payment → 0
+amountPaidOnIncreasedCostOfComplianceClaim,21744,7.85,outcome / leakage,Structural,closed without payment → 0
+mostRecentPaymentDate,21746,7.85,outcome / leakage,Structural,no payment → no date
+iccCoverage,14073,5.08,pre-loss feature,Structural + MAR,"46% contents-only policies; rest by policy form; constant 30,000 when present"
+buildingDeductibleCode,6774,2.45,pre-loss feature,Structural,95% of blanks are contents-only policies (no building deductible)
+causeOfDamage,3579,1.29,post-loss (adjuster),MAR,"1.3%, closed-without-inspection claims"
+originalConstructionDate,3462,1.25,pre-loss feature,MAR,1.2% incl. 1900-01-01 placeholders; differs by coverage (KS 0.6)
+numberOfUnits,2731,0.99,pre-loss feature,MCAR-plausible,"1%, small gap"
+censusGeoid,2520,0.91,geography,MCAR-plausible,"<1%, geocoding failure"
+latitude,1826,0.66,geography,MCAR-plausible,"<1%, geocoding failure"
+longitude,1826,0.66,geography,MCAR-plausible,"<1%, geocoding failure"
+replacementCostBasis,1628,0.59,post-loss (adjuster),MAR,0.6%; paid rate much lower when blank
+countyCode,450,0.16,geography,MCAR-plausible,<0.2%
+condominiumCoverageTypeCode,347,0.13,pre-loss feature,MCAR-plausible,0.1%
+numberOfFloorsInTheInsuredBuilding,346,0.12,pre-loss feature,MCAR-plausible,0.1%
+originalNBDate,53,0.02,pre-loss feature,MCAR-plausible,0.02%
+ratedFloodZone,53,0.02,pre-loss feature,MCAR-plausible,0.02%
+nfipCommunityName,7,0.0,geography,MCAR-plausible,tiny share
+totalContentsInsuranceCoverage,1,0.0,pre-loss feature,MCAR-plausible,tiny share
+nfipRatedCommunityNumber,3,0.0,geography,MCAR-plausible,tiny share

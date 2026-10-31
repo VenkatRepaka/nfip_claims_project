@@ -1,0 +1,79 @@
+[dedupe] exact duplicate rows (all columns except surrogate id) dropped, first copy kept: 453
+[dedupe] rows remaining: 276,580
+[types] Decimal columns -> float64, date objects -> datetime64, bool -> int8: 0
+[types] blank state set to missing: 1
+[types] ZIP codes whose length != 5 (kept as-is, not used as a feature): 258
+[payments] amountPaid* NaN (claim closed w/o payment; net payment==0 in all of them) -> 0: 21,568
+[payments] negative building payments (re-issued checks) clipped to 0 in target: 35
+[payments] negative contents payments clipped to 0 in target: 18
+[payments] high_severity threshold = 90th pct of paid claims in training years = $174,530; positives: 28,300
+[payments] claims whose total paid (building+contents) > statutory-looking cap check: building paid > building coverage + $1: 665
+[dates] originalConstructionDate < 1850 or after loss -> NaT: 485
+[dates] originalNBDate after loss or before 1968 (NFIP start) -> NaT: 6,371
+[dates] report lag (openDate - dateOfLoss) negative -> NaN: 56
+[dates] report lag > 365 days winsorised to 365: 994
+[categorical] legacy 1-digit occupancyType codes harmonised to 2-digit (1->11,2->12,3->13,4/6->18): 26,164
+[categorical] ratedFloodZone 52 labels -> zone families: 276,527
+[impute-mode] condominiumCoverageTypeCode missing -> mode: 347
+[impute-mode] replacementCostBasis missing -> mode: 1,613
+[impute-mode] numberOfFloorsInTheInsuredBuilding missing -> mode (1): 346
+[zero-vs-missing] contentsDeductibleCode NaN where contents coverage==0 -> 0 (no contents deductible applies): 78,604
+[winsorise] totalBuildingInsuranceCoverage clipped at p99.9 ($28,855,250) before log1p: 277
+[winsorise] totalContentsInsuranceCoverage clipped at p99.9 ($500,000) before log1p: 0
+[winsorise] policyCount clipped at p99.9: 275
+[impute-median] numberOfUnits missing -> median: 2,718
+[zero-vs-missing] buildingPropertyValue == 0 with building coverage > 0 (impossible) -> NaN: 26,637
+[zero-vs-missing] buildingReplacementCost == 0 with building coverage > 0 (impossible) -> NaN: 26,207
+[zero-vs-missing] buildingPropertyValue/ReplacementCost == 0 with NO building coverage kept as 0 (contents-only policies): 1,074
+[zero-vs-missing] contentsPropertyValue == -1 (invalid) -> NaN: 1
+[zero-vs-missing] contentsDamageAmount NaN where contents coverage==0 -> 0 (structural): 61,757
+[zero-vs-missing] contentsPropertyValue NaN where contents coverage==0 -> 0 (structural): 61,757
+[sentinel] waterDepth == 99 (sentinel spike; claims at 99 behave like 'unknown', not like 98/100) -> NaN: 12,489
+[info] waterDepth < 0 RETAINED (88% of those claims are paid vs 69% at depth 0 and 55% when depth is missing: carries signal): 12,428
+[sentinel] interiorWaterDepth >= 999 (sentinel) -> NaN: 3,190
+[sentinel] exteriorWaterDepth >= 999 (sentinel/implausible) -> NaN: 2,912
+[info] interior/exterior depth negatives retained (relative to lowest adjacent grade); all three depths winsorised at p1/p99.5: 7,970
+[sentinel] elevation columns with sentinel/implausible values (dropped columns; flagged only): 1,001
+[flag] adjuster_info_missing (building damage/value/replacement cost missing): 30,343
+[flag] building value or replacement cost missing although damage is present (zero->NaN recode; value-valuation not recorded): 26,880
+[winsorise] buildingDamageAmount clipped at p99.9 ($1,850,850) then log1p: 247
+[winsorise] buildingPropertyValue clipped at p99.9 ($53,075,765) then log1p: 220
+[winsorise] buildingReplacementCost clipped at p99.9 ($69,424,260) then log1p: 221
+[winsorise] contentsDamageAmount clipped at p99.9 ($603,915) then log1p: 235
+[winsorise] contentsPropertyValue clipped at p99.9 ($4,087,512) then log1p: 235
+single
+method           Iterative(BayesianRidge)  ...  group_median(occupancy x zone)
+column                                     ...                                
+exterior_depth                     18.799  ...                          22.827
+interior_depth                     17.397  ...                          22.361
+log_bldg_damage                     1.410  ...                           1.752
+log_bldg_value                      0.243  ...                           0.996
+log_cont_damage                     2.639  ...                           5.032
+log_cont_value                      3.288  ...                           6.366
+log_repl_cost                       0.210  ...                           0.897
+water_depth                         3.179  ...                           3.929
+
+[8 rows x 4 columns]
+joint
+method           Iterative(BayesianRidge)  ...  group_median(occupancy x zone)
+column                                     ...                                
+exterior_depth                     23.145  ...                          24.312
+interior_depth                     21.281  ...                          22.126
+log_bldg_damage                     1.790  ...                           1.866
+log_bldg_value                      0.902  ...                           1.108
+log_cont_damage                     3.258  ...                           5.078
+log_cont_value                      3.685  ...                           6.418
+log_repl_cost                       0.901  ...                           1.074
+water_depth                         3.897  ...                           3.977
+
+[8 rows x 4 columns]
+chosen: {'exterior_depth': 'KNN(k=10)', 'interior_depth': 'Iterative(BayesianRidge)', 'log_bldg_damage': 'KNN(k=10)', 'log_bldg_value': 'KNN(k=10)', 'log_cont_damage': 'KNN(k=10)', 'log_cont_value': 'Iterative(BayesianRidge)', 'log_repl_cost': 'KNN(k=10)', 'water_depth': 'Iterative(BayesianRidge)'}
+Remaining NaN columns:
+ nonpay_reason_building    222034
+nonpay_reason_contents    179481
+flood_event                56447
+countyCode                   450
+censusGeoid                 2518
+dtype: int64
+[save] cleaned_claims.csv size 159 MB; rows: 276,580
+done (276580, 82)

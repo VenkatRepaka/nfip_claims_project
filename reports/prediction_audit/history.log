@@ -1,0 +1,23 @@
+/Users/home/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/7s/rgb20vpx2f9_ly3fy0b4x0pw0000gn/T/matplotlib-er_b8yza because there was an issue with the default path (/Users/home/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib is building the font cache; this may take a moment.
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W20261021 09:57:35.106664 1804972032 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+W20261021 09:57:35.107306 1804972032 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+W20261021 09:57:35.107520 1804972032 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+W20261021 09:57:35.107717 1804972032 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+Paid claims: 212,932
+region
+Florida Peninsula           120637
+Other                        36583
+Gulf Coast                   34660
+Mid-Atlantic & Northeast     21052
+Name: count, dtype: int64
+All-groups feature set: 104 columns + county_history + storm_history
+Notebook 03 feature set: 15 columns
+A. known storms  train 149,052  test  63,880
+B. new storms    train 119,746  test  93,186
+                  variant  r2_dollars  mae_dollars  median_error_dollars  rmse_dollars
+  self_inclusive_original    0.648918 39601.019337          22462.057606  92193.651398
+out_of_fold_train_history    0.638491 39736.116237          22483.799474  93552.611609
+        no_target_history    0.604888 39988.908248          22571.579607  97803.996102

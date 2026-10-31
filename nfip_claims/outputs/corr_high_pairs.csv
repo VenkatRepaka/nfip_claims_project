@@ -1,0 +1,5 @@
+feature_1,feature_2,spearman
+log_bldg_value,log_repl_cost,0.9500699175891708
+log_bldg_damage,damage_to_value_ratio,0.86331157295106
+cont_deductible_usd,no_contents_cov,-0.8113487554628595
+log_cont_coverage,no_contents_cov,-0.8075350343996743

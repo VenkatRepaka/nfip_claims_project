@@ -1,0 +1,66 @@
+feature,tier,source,description,rec_T1_A,rec_T1_B,rec_T2_A,rec_T2_B,rec_T3_A,rec_T3_B
+log_bldg_coverage,A,totalBuildingInsuranceCoverage,log1p of building coverage limit (clipped p99.9),1,1,1,0,1,1
+log_cont_coverage,A,totalContentsInsuranceCoverage,log1p of contents coverage limit,1,1,1,0,1,1
+log_policy_count,A,policyCount,log1p of insured units on record (clipped p99.9),1,1,1,0,1,0
+log_num_units,A,numberOfUnits,"log1p of condo-master unit count (clipped, median-imputed)",1,0,1,1,1,0
+building_age,A,"originalConstructionDate, dateOfLoss",years from construction to loss (invalid dates imputed by group median),1,1,1,0,1,0
+policy_tenure_years,A,"originalNBDate, dateOfLoss",years from original policy date to loss,1,1,1,1,1,0
+report_lag_days,A,"openDate, dateOfLoss",days from loss to claim opening (clipped 0..365),1,0,1,1,1,1
+loss_month_sin,A,dateOfLoss,cyclic month encoding,1,0,0,0,1,0
+loss_month_cos,A,dateOfLoss,cyclic month encoding,1,0,0,0,1,0
+loss_dow,A,dateOfLoss,day of week of loss,1,0,0,1,1,0
+latitude,A,latitude,0.1-degree rounded; missing -> county/state median,1,1,1,0,1,0
+longitude,A,longitude,0.1-degree rounded; missing -> county/state median,1,1,1,0,1,0
+bldg_deductible_usd,A,buildingDeductibleCode,deductible in USD (code map),1,1,1,1,1,1
+cont_deductible_usd,A,contentsDeductibleCode,contents deductible USD; 0 when no contents coverage,1,1,1,0,1,0
+crs_class,A,crsClassCode,"CRS class 1-10 (missing -> state median, see crs_unknown)",0,0,1,0,0,0
+elevated_building,A,elevatedBuildingIndicator,binary,1,1,1,0,1,0
+post_firm,A,postFIRMConstructionIndicator,binary,1,1,1,0,1,0
+primary_residence,A,primaryResidenceIndicator,binary,1,1,1,0,1,0
+rental_property,A,rentalPropertyIndicator,binary,1,0,1,0,1,0
+small_business,A,smallBusinessIndicatorBuilding,binary,0,0,0,0,0,0
+is_rr2,A,rateMethod,1 if rated by Risk Rating 2.0 engine ('RE'),0,0,0,0,0,0
+no_contents_cov,A,totalContentsInsuranceCoverage,1 if contents coverage = 0,0,0,0,0,0,0
+no_building_cov,A,totalBuildingInsuranceCoverage,1 if building coverage = 0,0,0,1,0,0,0
+crs_unknown,A,crsClassCode,1 if CRS class missing,0,0,1,0,1,0
+named_event,A,floodEvent,1 if claim belongs to a named FEMA flood event,1,0,1,1,1,0
+has_elevation_data,A,elevation columns,1 if any elevation field is present and non-sentinel,0,0,1,0,1,0
+has_elevation_cert,A,elevationCertificateIndicator,1 if elevation-certificate indicator present,0,1,0,0,0,0
+construction_date_jan1,A,originalConstructionDate,1 if construction date is Jan 1 (placeholder),1,0,1,0,0,0
+bldg_age_invalid_or_missing,A,originalConstructionDate,1 if construction date missing/invalid (age imputed),0,0,0,0,0,0
+tenure_invalid_or_missing,A,originalNBDate,1 if policy date missing/invalid (tenure imputed),0,0,0,0,0,0
+bldg_deductible_missing,A,buildingDeductibleCode,1 if building deductible code missing,0,0,0,0,0,0
+cont_deductible_missing,A,contentsDeductibleCode,1 if contents deductible still missing after structural fill,0,0,0,0,0,0
+occupancy_std,A,occupancyType,harmonised occupancy label,1,1,1,0,1,0
+flood_zone_family,A,ratedFloodZone,AE/A/AH/AO/A99/V/X/D,1,0,1,0,1,0
+rating_group,A,rateMethod,RR2.0/manual/PRP/GFIP/prefirm_elev/specific/other,0,0,0,0,0,0
+foundation_type,A,foundationType,labelled foundation type,1,1,1,0,1,0
+basement_type,A,basementEnclosureCrawlspaceType,labelled; 'unknown' for missing,1,0,0,0,1,1
+contents_location,A,locationOfContents,code; 'unknown' for missing,1,0,1,0,1,0
+building_use,A,buildingDescriptionCode,main_house/apartment_bldg/other/other_use/unknown,1,1,1,0,0,0
+condo_type,A,condominiumCoverageTypeCode,N/U/A/L/H (mode-filled),1,1,1,0,1,0
+state_grp,A,state,top-15 states + OTHER,1,0,0,0,1,0
+num_floors_code,A,numberOfFloorsInTheInsuredBuilding,code (mode-filled),1,1,0,0,1,0
+flood_event_grp,A,floodEvent,top-12 events + OTHER_EVENT + NO_NAMED_EVENT,0,0,0,0,0,0
+log_bldg_damage,B,buildingDamageAmount,log1p building damage (clipped p99.9; imputed),0,1,0,1,0,1
+log_bldg_value,B,buildingPropertyValue,log1p building ACV (0->NaN; imputed),0,1,0,1,0,1
+log_repl_cost,B,buildingReplacementCost,log1p replacement cost (0->NaN; imputed),0,0,0,0,0,0
+log_cont_damage,B,contentsDamageAmount,log1p contents damage (structural 0 when no contents cover; imputed otherwise),0,1,0,1,0,1
+log_cont_value,B,contentsPropertyValue,log1p contents value,0,1,0,1,0,1
+water_depth,B,waterDepth,inches; 99 sentinel -> NaN -> imputed; winsorised,0,1,0,0,0,1
+interior_depth,B,interiorWaterDepth,inches; 999 -> NaN -> imputed,0,1,0,1,0,1
+exterior_depth,B,exteriorWaterDepth,inches; >=999 -> NaN -> imputed,0,1,0,1,0,0
+damage_to_value_ratio,B,damage / value,building damage divided by building value (clip 2),0,1,0,1,0,1
+coverage_to_repl_ratio,B,coverage / replacement,building coverage divided by replacement cost (clip 5): under-insurance proxy,0,1,0,0,0,0
+adjuster_info_missing,B,buildingDamageAmount,1 if no adjuster damage/value record,0,1,0,1,0,1
+cont_damage_missing,B,contentsDamageAmount,1 if contents damage missing (not structural),0,1,0,1,0,1
+water_depth_missing,B,waterDepth,1 if depth missing/sentinel,0,1,0,1,0,1
+interior_depth_missing,B,interiorWaterDepth,1 if missing/sentinel,0,1,0,0,0,0
+exterior_depth_missing,B,exteriorWaterDepth,1 if missing/sentinel,0,0,0,1,0,0
+bldg_value_recoded_missing,B,buildingPropertyValue/ReplacementCost,1 if value/replacement cost was 0 with coverage > 0 and recoded to missing,0,1,0,1,0,1
+cause_group,B,causeOfDamage,rainfall_accum/tidal/stream_river/other/expedited/unknown (TIER B),0,1,0,1,0,0
+repl_cost_basis,B,replacementCostBasis,R/A (mode-filled),0,1,0,1,0,1
+leak_log_net_bldg_payment,LEAK,netBuildingPaymentAmount,LEAKAGE demo,0,0,0,0,0,0
+leak_log_net_cont_payment,LEAK,netContentsPaymentAmount,LEAKAGE demo,0,0,0,0,0,0
+leak_nonpay_reason_building_present,LEAK,nonPaymentReasonBuilding,LEAKAGE demo,0,0,0,0,0,0
+leak_nonpay_reason_contents_present,LEAK,nonPaymentReasonContents,LEAKAGE demo,0,0,0,0,0,0

@@ -1,0 +1,196 @@
+target,feature,mi
+T1_reg_log_total_paid (paid claims),log_bldg_coverage,0.2011536821927682
+T1_reg_log_total_paid (paid claims),log_cont_coverage,0.06892344884500234
+T1_reg_log_total_paid (paid claims),log_policy_count,0.04504401757940779
+T1_reg_log_total_paid (paid claims),log_num_units,0.04871271517514253
+T1_reg_log_total_paid (paid claims),building_age,0.08730523532998458
+T1_reg_log_total_paid (paid claims),policy_tenure_years,0.05611863629682734
+T1_reg_log_total_paid (paid claims),report_lag_days,0.03889966709884174
+T1_reg_log_total_paid (paid claims),loss_month_sin,0.03734614565880179
+T1_reg_log_total_paid (paid claims),loss_month_cos,0.04108844588386651
+T1_reg_log_total_paid (paid claims),loss_dow,0.03754290691393791
+T1_reg_log_total_paid (paid claims),latitude,0.1509514843487345
+T1_reg_log_total_paid (paid claims),longitude,0.1573734512229059
+T1_reg_log_total_paid (paid claims),bldg_deductible_usd,0.06739833694418484
+T1_reg_log_total_paid (paid claims),cont_deductible_usd,0.053713508629520845
+T1_reg_log_total_paid (paid claims),crs_class,0.05578804898810574
+T1_reg_log_total_paid (paid claims),elevated_building,0.04136719520447407
+T1_reg_log_total_paid (paid claims),post_firm,0.02092857005265758
+T1_reg_log_total_paid (paid claims),primary_residence,0.03307647811842496
+T1_reg_log_total_paid (paid claims),rental_property,0.007424420497039064
+T1_reg_log_total_paid (paid claims),small_business,0.004582986891246366
+T1_reg_log_total_paid (paid claims),is_rr2,0.01158893579499809
+T1_reg_log_total_paid (paid claims),no_contents_cov,0.018157483641861205
+T1_reg_log_total_paid (paid claims),no_building_cov,0.009852535480920244
+T1_reg_log_total_paid (paid claims),crs_unknown,0.016105739656775198
+T1_reg_log_total_paid (paid claims),named_event,0.032954728480999895
+T1_reg_log_total_paid (paid claims),has_elevation_data,0.012472560560986556
+T1_reg_log_total_paid (paid claims),has_elevation_cert,0.0009939648190644412
+T1_reg_log_total_paid (paid claims),construction_date_jan1,0.0
+T1_reg_log_total_paid (paid claims),bldg_age_invalid_or_missing,0.0013717039318447144
+T1_reg_log_total_paid (paid claims),tenure_invalid_or_missing,0.0006407736067970404
+T1_reg_log_total_paid (paid claims),bldg_deductible_missing,0.010816350455019386
+T1_reg_log_total_paid (paid claims),cont_deductible_missing,0.0
+T1_reg_log_total_paid (paid claims),occupancy_std,0.08252959621865963
+T1_reg_log_total_paid (paid claims),flood_zone_family,0.02784570678235232
+T1_reg_log_total_paid (paid claims),rating_group,0.018091184156140416
+T1_reg_log_total_paid (paid claims),foundation_type,0.09669980395108979
+T1_reg_log_total_paid (paid claims),basement_type,0.03882046574693332
+T1_reg_log_total_paid (paid claims),contents_location,0.05782573463074003
+T1_reg_log_total_paid (paid claims),building_use,0.014785959976475693
+T1_reg_log_total_paid (paid claims),condo_type,0.04778854223334261
+T1_reg_log_total_paid (paid claims),state_grp,0.07970356859300498
+T1_reg_log_total_paid (paid claims),num_floors_code,0.046351369824077615
+T1_reg_log_total_paid (paid claims),flood_event_grp,0.09932214040631182
+T1_reg_log_total_paid (paid claims),log_bldg_damage,2.508028294668721
+T1_reg_log_total_paid (paid claims),log_bldg_value,0.15709733770834333
+T1_reg_log_total_paid (paid claims),log_repl_cost,0.16262948196636184
+T1_reg_log_total_paid (paid claims),log_cont_damage,0.35056611684253314
+T1_reg_log_total_paid (paid claims),log_cont_value,0.07406111855793274
+T1_reg_log_total_paid (paid claims),water_depth,0.10569139130211935
+T1_reg_log_total_paid (paid claims),interior_depth,0.09439119224096704
+T1_reg_log_total_paid (paid claims),exterior_depth,0.06736362435797627
+T1_reg_log_total_paid (paid claims),damage_to_value_ratio,0.5232419762700973
+T1_reg_log_total_paid (paid claims),coverage_to_repl_ratio,0.08461386122132275
+T1_reg_log_total_paid (paid claims),adjuster_info_missing,0.009364066015274508
+T1_reg_log_total_paid (paid claims),cont_damage_missing,0.01538229380584677
+T1_reg_log_total_paid (paid claims),water_depth_missing,0.03413825346093846
+T1_reg_log_total_paid (paid claims),interior_depth_missing,0.04049572733815898
+T1_reg_log_total_paid (paid claims),exterior_depth_missing,0.009465238565061762
+T1_reg_log_total_paid (paid claims),bldg_value_recoded_missing,1.0936345355094801e-05
+T1_reg_log_total_paid (paid claims),cause_group,0.0168540079156827
+T1_reg_log_total_paid (paid claims),repl_cost_basis,0.016121169235655097
+T1_reg_log_total_paid (paid claims),leak_log_net_bldg_payment,5.638180338372742
+T1_reg_log_total_paid (paid claims),leak_log_net_cont_payment,0.4432283833370185
+T1_reg_log_total_paid (paid claims),leak_nonpay_reason_building_present,0.008217670608989591
+T1_reg_log_total_paid (paid claims),leak_nonpay_reason_contents_present,0.09436305654467692
+T2_cls_is_paid,log_bldg_coverage,0.006487035647402939
+T2_cls_is_paid,log_cont_coverage,0.003369120588930352
+T2_cls_is_paid,log_policy_count,0.004863462099319982
+T2_cls_is_paid,log_num_units,0.008892478160491768
+T2_cls_is_paid,building_age,0.020628030320348323
+T2_cls_is_paid,policy_tenure_years,0.007732857340092769
+T2_cls_is_paid,report_lag_days,0.020070192975333523
+T2_cls_is_paid,loss_month_sin,0.006243590259690235
+T2_cls_is_paid,loss_month_cos,0.005182540704119942
+T2_cls_is_paid,loss_dow,0.010477422057192598
+T2_cls_is_paid,latitude,0.02788407473460519
+T2_cls_is_paid,longitude,0.02443132534182335
+T2_cls_is_paid,bldg_deductible_usd,0.008654879208553456
+T2_cls_is_paid,cont_deductible_usd,0.0037606104767724524
+T2_cls_is_paid,crs_class,0.004455365628339036
+T2_cls_is_paid,elevated_building,0.0002348843626888697
+T2_cls_is_paid,post_firm,0.0043683078179327095
+T2_cls_is_paid,primary_residence,0.00021762600212274497
+T2_cls_is_paid,rental_property,0.00012353047879785917
+T2_cls_is_paid,small_business,8.652283190652144e-05
+T2_cls_is_paid,is_rr2,0.001078027098837836
+T2_cls_is_paid,no_contents_cov,1.97599201270382e-05
+T2_cls_is_paid,no_building_cov,0.0007157735022539496
+T2_cls_is_paid,crs_unknown,5.411389860121574e-05
+T2_cls_is_paid,named_event,0.008719041902222197
+T2_cls_is_paid,has_elevation_data,1.8275396348188533e-06
+T2_cls_is_paid,has_elevation_cert,0.0001231909344755061
+T2_cls_is_paid,construction_date_jan1,5.37723385179989e-07
+T2_cls_is_paid,bldg_age_invalid_or_missing,1.2268271174127598e-08
+T2_cls_is_paid,tenure_invalid_or_missing,2.3092499199288408e-05
+T2_cls_is_paid,bldg_deductible_missing,0.0006130879706121306
+T2_cls_is_paid,cont_deductible_missing,4.425530036944415e-06
+T2_cls_is_paid,occupancy_std,0.002696430320377287
+T2_cls_is_paid,flood_zone_family,0.00821099413020606
+T2_cls_is_paid,rating_group,0.00375589060655962
+T2_cls_is_paid,foundation_type,0.002597390781440681
+T2_cls_is_paid,basement_type,0.0017621092796162655
+T2_cls_is_paid,contents_location,0.0033956194199167428
+T2_cls_is_paid,building_use,0.0006085039755124276
+T2_cls_is_paid,condo_type,0.002574115928321404
+T2_cls_is_paid,state_grp,0.008180844596731976
+T2_cls_is_paid,num_floors_code,0.0010596454083912732
+T2_cls_is_paid,flood_event_grp,0.011829041446384997
+T2_cls_is_paid,log_bldg_damage,0.23538460998580568
+T2_cls_is_paid,log_bldg_value,0.03440585520842343
+T2_cls_is_paid,log_repl_cost,0.03347881784968498
+T2_cls_is_paid,log_cont_damage,0.09636935600591734
+T2_cls_is_paid,log_cont_value,0.08664588059610745
+T2_cls_is_paid,water_depth,0.10560251453229608
+T2_cls_is_paid,interior_depth,0.13642521450476686
+T2_cls_is_paid,exterior_depth,0.16985200529832745
+T2_cls_is_paid,damage_to_value_ratio,0.216686333089936
+T2_cls_is_paid,coverage_to_repl_ratio,0.024378569137777584
+T2_cls_is_paid,adjuster_info_missing,0.12686825471541321
+T2_cls_is_paid,cont_damage_missing,0.04381779585223619
+T2_cls_is_paid,water_depth_missing,0.026152648991765087
+T2_cls_is_paid,interior_depth_missing,0.10836295733647652
+T2_cls_is_paid,exterior_depth_missing,0.1875461858619905
+T2_cls_is_paid,bldg_value_recoded_missing,0.026692523452007996
+T2_cls_is_paid,cause_group,0.10168861643958331
+T2_cls_is_paid,repl_cost_basis,0.021404391389953245
+T2_cls_is_paid,leak_log_net_bldg_payment,0.46294001931368034
+T2_cls_is_paid,leak_log_net_cont_payment,0.10270357893495863
+T2_cls_is_paid,leak_nonpay_reason_building_present,0.41094383054891764
+T2_cls_is_paid,leak_nonpay_reason_contents_present,0.06700777170080993
+T3_cls_high_severity,log_bldg_coverage,0.039895330373050264
+T3_cls_high_severity,log_cont_coverage,0.011670640644236618
+T3_cls_high_severity,log_policy_count,0.02155757869435959
+T3_cls_high_severity,log_num_units,0.018372906839213998
+T3_cls_high_severity,building_age,0.029004887760141873
+T3_cls_high_severity,policy_tenure_years,0.01352860579213111
+T3_cls_high_severity,report_lag_days,0.007124138388429291
+T3_cls_high_severity,loss_month_sin,0.014553431494652713
+T3_cls_high_severity,loss_month_cos,0.014746240746498218
+T3_cls_high_severity,loss_dow,0.014968635166018984
+T3_cls_high_severity,latitude,0.03340687103138906
+T3_cls_high_severity,longitude,0.03439811071766763
+T3_cls_high_severity,bldg_deductible_usd,0.013164295025790418
+T3_cls_high_severity,cont_deductible_usd,0.009847557617759684
+T3_cls_high_severity,crs_class,0.017294401883221733
+T3_cls_high_severity,elevated_building,0.00341928568169024
+T3_cls_high_severity,post_firm,5.830657969849162e-05
+T3_cls_high_severity,primary_residence,0.005795659480489088
+T3_cls_high_severity,rental_property,5.690934296843919e-06
+T3_cls_high_severity,small_business,0.0006093136938462411
+T3_cls_high_severity,is_rr2,0.0021123678115962836
+T3_cls_high_severity,no_contents_cov,0.00033891717494856366
+T3_cls_high_severity,no_building_cov,0.0003417617484125224
+T3_cls_high_severity,crs_unknown,0.0022525500390589287
+T3_cls_high_severity,named_event,0.009236496741180263
+T3_cls_high_severity,has_elevation_data,0.0012838765260869411
+T3_cls_high_severity,has_elevation_cert,0.00014876227619375904
+T3_cls_high_severity,construction_date_jan1,2.0986991382351827e-05
+T3_cls_high_severity,bldg_age_invalid_or_missing,2.5073626089741922e-05
+T3_cls_high_severity,tenure_invalid_or_missing,0.00014413859733415461
+T3_cls_high_severity,bldg_deductible_missing,0.0004351279494544079
+T3_cls_high_severity,cont_deductible_missing,0.0
+T3_cls_high_severity,occupancy_std,0.01916946175348305
+T3_cls_high_severity,flood_zone_family,0.007513498106735633
+T3_cls_high_severity,rating_group,0.0028444057775378986
+T3_cls_high_severity,foundation_type,0.01151425658346409
+T3_cls_high_severity,basement_type,0.005853982617171198
+T3_cls_high_severity,contents_location,0.00564072200958858
+T3_cls_high_severity,building_use,0.001424948498717828
+T3_cls_high_severity,condo_type,0.013344876549850147
+T3_cls_high_severity,state_grp,0.015909792514285037
+T3_cls_high_severity,num_floors_code,0.001429357108027233
+T3_cls_high_severity,flood_event_grp,0.025747750418338405
+T3_cls_high_severity,log_bldg_damage,0.20371257377381835
+T3_cls_high_severity,log_bldg_value,0.05411686434021079
+T3_cls_high_severity,log_repl_cost,0.0541710792447474
+T3_cls_high_severity,log_cont_damage,0.07554232332203581
+T3_cls_high_severity,log_cont_value,0.0280554596039726
+T3_cls_high_severity,water_depth,0.029249611074490423
+T3_cls_high_severity,interior_depth,0.027213621240145036
+T3_cls_high_severity,exterior_depth,0.029774975168506135
+T3_cls_high_severity,damage_to_value_ratio,0.05539340236283774
+T3_cls_high_severity,coverage_to_repl_ratio,0.015452568227700691
+T3_cls_high_severity,adjuster_info_missing,0.008036030281724933
+T3_cls_high_severity,cont_damage_missing,0.006636218793332592
+T3_cls_high_severity,water_depth_missing,0.00681193085515067
+T3_cls_high_severity,interior_depth_missing,0.01662547206098778
+T3_cls_high_severity,exterior_depth_missing,0.01163507158148962
+T3_cls_high_severity,bldg_value_recoded_missing,0.0004282052244797621
+T3_cls_high_severity,cause_group,0.009268192906630798
+T3_cls_high_severity,repl_cost_basis,0.0016468309408549792
+T3_cls_high_severity,leak_log_net_bldg_payment,0.22576671384805036
+T3_cls_high_severity,leak_log_net_cont_payment,0.07264203858603913
+T3_cls_high_severity,leak_nonpay_reason_building_present,0.019726094038837773
+T3_cls_high_severity,leak_nonpay_reason_contents_present,0.022172870222279793

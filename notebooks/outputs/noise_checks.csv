@@ -1,0 +1,16 @@
+,rows,% rows,treatment
+negative building payment (reissued/uncashed check),35,0.013,clip to 0 in target
+building payment > building coverage + $1,665,0.24,keep + flag (limits/ICC adjustments)
+construction date after date of loss,90,0.033,"→ NaN, then impute age"
+construction date before 1850,125,0.045,"→ NaN, then impute age"
+policy start (originalNBDate) after loss,6339,2.292,→ NaN (tenure unknown)
+policy start before 1968 (NFIP did not exist),30,0.011,→ NaN (tenure unknown)
+claim opened before the loss,56,0.02,→ NaN (lag unknown)
+claim opened > 365 days after loss,994,0.359,cap lag at 365
+building damage > building value (ACV),2053,0.742,keep + flag (ACV vs RC basis)
+single-family coverage above $250k statutory limit,0,0.0,check passed: none found
+water depth < 0 (below lowest floor),12428,4.493,"keep: valid, depth is relative to lowest floor (evidence below)"
+last payment date before the claim was opened,341,0.123,"keep (payment-date field is leakage, not a feature)"
+net building payment > building damage,50281,18.18,keep + flag (RC-basis settlements can exceed ACV damage)
+ZIP code not 5 characters,258,0.093,keep (ZIP is not a feature)
+blank state,1,0.0,→ 'UNK'

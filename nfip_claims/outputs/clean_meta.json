@@ -1,0 +1,7 @@
+{
+  "train_max_year": 2023,
+  "high_severity_threshold_usd": 174530.27000000002,
+  "n_rows_clean": 276580,
+  "n_cols_clean": 82,
+  "csv_mb": 158.751425
+}

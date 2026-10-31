@@ -1,0 +1,42 @@
+column,rule,reason,% missing,top value share %
+ficoNumber,R1 empty,100% missing (replaced by eventDesignationNumber in 2020),100.0,100.0
+floodCharacteristicsIndicator,R1 empty,100% missing,100.0,100.0
+reportedCity,R1 empty,redacted: every value 'Currently Unavailable',100.0,100.0
+asOfDate,R2 constant,single snapshot timestamp,0.0,100.0
+iccCoverage,R2 constant,"30,000 on every non-missing row",5.08,94.92
+floodproofedIndicator,R2 near-constant,≥ 99.5% False,0.0,100.0
+agricultureStructureIndicator,R2 near-constant,≥ 99.5% False,0.0,99.97
+stateOwnedIndicator,R2 near-constant,≥ 99.5% False,0.0,99.97
+houseWorship,R2 near-constant,≥ 99.5% False,0.0,99.89
+disasterAssistanceCoverageRequired,R2 near-constant,66.5% missing and 99% of the rest are 0,66.52,66.52
+floodWaterDuration,R3 sparse,"94% missing, not structural",94.36,94.36
+elevationCertificateIndicator,R3 sparse,88% missing; kept only as a 'code reported' flag,87.68,87.68
+id,R4 identifier,row key (kept aside for traceability),0.0,0.0
+nfipCommunityName,R4 high-cardinality text,6.8k free-text names; same information as community number,0.0,6.71
+nfipRatedCommunityNumber,R4 high-cardinality,7.9k levels; used only to look up CRS class (Section 7),0.0,6.71
+nfipCommunityNumberCurrent,R4 high-cardinality,"7.3k levels, 20% missing",20.17,20.17
+reportedZipCode,R4 high-cardinality,11.9k levels; quasi-identifier,0.0,2.7
+censusGeoid,R4 high-cardinality,"39.6k block groups; join key for Census data, not a feature",0.91,0.91
+countyCode,R4 high-cardinality,2.2k levels; used for lat/lon imputation; frequency-encode if needed,0.16,13.17
+yearOfLoss,R5 redundant,100% equal to year(dateOfLoss); kept only as a grouping key,0.0,36.84
+eventDesignationNumber,R5 redundant,code for floodEvent; replaced by is_named_event flag,33.56,33.56
+floodZoneCurrent,R5 redundant,agrees with ratedFloodZone on most rows; 20% missing; the rated zone is what priced the policy,20.21,53.31
+preFirmIndicator,R5 redundant/ambiguous,not the complement of postFIRMConstructionIndicator; building age carries it,0.0,75.7
+contentsReplacementCost,R5 redundant,near-duplicate of contentsPropertyValue; 38% missing,37.69,53.48
+netBuildingPaymentAmount,R6 leakage,= RQ1 target minus recoveries,0.0,23.03
+netContentsPaymentAmount,R6 leakage,post-outcome payment,0.0,66.93
+netIccPaymentAmount,R6 leakage,post-outcome payment,0.0,99.62
+amountPaidOnContentsClaim,R6 leakage,post-outcome payment,7.8,59.12
+amountPaidOnIncreasedCostOfComplianceClaim,R6 leakage,post-outcome payment,7.8,91.82
+mostRecentPaymentDate,R6 leakage,exists only if paid,7.8,7.8
+nonPaymentReasonBuilding,R6 leakage,exists only if NOT paid,80.28,80.28
+nonPaymentReasonContents,R6 leakage,exists only if NOT paid,64.89,64.89
+mostRecentRecoveryDate,R6 leakage,"99.9% missing, post-outcome",99.85,99.85
+totalSalvageRecovery,R6 leakage,"99.9% missing, post-outcome",99.85,99.85
+totalBldgClaimPmtRecovery,R6 leakage,"99.9% missing, post-outcome",99.85,99.85
+totalContentsClaimPmtRecovery,R6 leakage,"99.9% missing, post-outcome",99.85,99.85
+totalIccClaimPmtRecovery,R6 leakage,"99.9% missing, post-outcome",99.85,99.85
+totalSubrogationRecovery,R6 leakage,"99.9% missing, post-outcome",99.85,99.85
+baseFloodElevation,R7 sparse + location proxy,66% missing; feet above datum mainly encodes place,66.39,66.39
+lowestFloorElevation,R7 sparse + location proxy,64% missing; same,64.26,64.26
+lowestAdjacentGrade,R7 sparse + location proxy,64% missing; same,64.5,64.5

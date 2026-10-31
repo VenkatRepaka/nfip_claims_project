@@ -1,0 +1,16 @@
+step,applied to,action,why,what we give up
+Time split,all rows,"train = 2020–2023, test = 2024–2025; every fill, cap, threshold, encoder and scaler fit on train",no test-year information in training features,2024–25 storms never inform the fills
+Disguised missing,"waterDepth=99, depths≥999, elevations≥9000 (elev. difference ≥500), $0 building value with coverage, $1 damage, -1 contents value, placeholder dates",→ NaN,"they are codes, not measurements",none (they were never real values)
+Duplicates,453 rows identical on all 83 non-key fields,drop extra copies,same claim keyed twice; avoids train/test leakage,≤ 453 possibly real claims
+Drop,"41 columns (empty, constant, sparse, IDs, redundant, leakage, location proxies)",remove from features,"rules R1–R7, Section 6",absolute elevations for a subset
+Structural zero,"amountPaidOn*, contents damage/value without contents cover",fill 0,blank means $0 by definition,nothing
+Explicit level,"obstruction, basement, contents location, building description, cause, deductibles, floodEvent",'not_applicable' / 'unknown',MCAR rejected; missingness is informative,extra dummy columns
+Lookup,crsClassCode,same community's CRS class,CRS class is a community attribute,nothing (true value)
+Mode / median,"condo type, cost basis, floors, zone; numberOfUnits",mode / median,"<1% missing, MCAR-plausible",negligible
+Spatial fill,"latitude, longitude",county mean → state mean,location ≈ its county,~0.1° precision
+Adjuster block + flag,"water depths, building value / replacement cost",method per column chosen by joint masking (7.3),columns go missing together,imputed spread narrower than observed
+Not imputed,"buildingDamageAmount (RQ2 label), elevationDifference",leave NaN + flag,never impute a label; 66% too sparse,11% of rows leave RQ2
+Noise,"negative payments, construction after loss / before 1850, NB date after loss / before 1968, open before loss",clip / → NaN (+ flags),impossible by definition,a few thousand rows' dates
+Outliers,"dollar fields, depths",keep; log1p winsorised at train p99.9 (log_*); depths clipped at train p1/p99.5 (*_w),extremes are real and important,linear-scale interpretability
+Encoding,nominal vs ordinal,one-hot (rare→other) vs ordered ints / $ amounts,order exists only for ordinal,rare-level detail
+Scaling,dollar & count columns,log1p → StandardScaler (Robust fallback),PCA/k-means need comparable variance,none for trees (unscaled)

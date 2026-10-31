@@ -1,0 +1,45 @@
+{'target': 'T1_reg_log_total_paid (paid claims)', 'feature_set': 'A', 'n_features': 44, 'model': 'XGBoost', 'n_train': 123590, 'n_test': 96219, 'R2': 0.33187153394152824, 'RMSE_log': 1.236595321833047}
+{'target': 'T1_reg_log_total_paid (paid claims)', 'feature_set': 'B', 'n_features': 61, 'model': 'XGBoost', 'n_train': 123590, 'n_test': 96219, 'R2': 0.9569397352594478, 'RMSE_log': 0.3139322691585098}
+{'target': 'T1_reg_log_total_paid (paid claims)', 'feature_set': 'LEAK', 'n_features': 65, 'model': 'XGBoost', 'n_train': 123590, 'n_test': 96219, 'R2': 0.9977478445978657, 'RMSE_log': 0.07179542794373657}
+{'target': 'T2_cls_is_paid', 'feature_set': 'A', 'n_features': 44, 'model': 'XGBoost', 'n_train': 161546, 'n_test': 115034, 'AUC': 0.7681364689640804, 'PR_AUC': 0.9398049274148108, 'base_rate': 0.8364396613175236}
+{'target': 'T2_cls_is_paid', 'feature_set': 'B', 'n_features': 61, 'model': 'XGBoost', 'n_train': 161546, 'n_test': 115034, 'AUC': 0.9902805885094206, 'PR_AUC': 0.9974191715263965, 'base_rate': 0.8364396613175236}
+{'target': 'T2_cls_is_paid', 'feature_set': 'LEAK', 'n_features': 65, 'model': 'XGBoost', 'n_train': 161546, 'n_test': 115034, 'AUC': 0.9999570853425913, 'PR_AUC': 0.9999920286781901, 'base_rate': 0.8364396613175236}
+{'target': 'T3_cls_high_severity', 'feature_set': 'A', 'n_features': 44, 'model': 'XGBoost', 'n_train': 161546, 'n_test': 115034, 'AUC': 0.8601981717480983, 'PR_AUC': 0.44263364754375284, 'base_rate': 0.1385764208842603}
+{'target': 'T3_cls_high_severity', 'feature_set': 'B', 'n_features': 61, 'model': 'XGBoost', 'n_train': 161546, 'n_test': 115034, 'AUC': 0.9946601264080606, 'PR_AUC': 0.979192081232152, 'base_rate': 0.1385764208842603}
+{'target': 'T3_cls_high_severity', 'feature_set': 'LEAK', 'n_features': 65, 'model': 'XGBoost', 'n_train': 161546, 'n_test': 115034, 'AUC': 0.9999303360926549, 'PR_AUC': 0.9996779993036894, 'base_rate': 0.1385764208842603}
+                                                          0  ...                     5
+target                  T1_reg_log_total_paid (paid claims)  ...  T3_cls_high_severity
+feature_set                                               A  ...                     B
+n_features_full                                          44  ...                    61
+n_features_recommended                                   32  ...                    15
+rec_R2                                              0.36119  ...                   NaN
+rec_RMSE_log                                        1.20916  ...                   NaN
+full_R2                                            0.331872  ...                   NaN
+full_RMSE_log                                      1.236595  ...                   NaN
+rec_AUC                                                 NaN  ...              0.994978
+rec_PR_AUC                                              NaN  ...              0.979855
+rec_base_rate                                           NaN  ...              0.138576
+full_AUC                                                NaN  ...               0.99466
+full_PR_AUC                                             NaN  ...              0.979192
+
+[13 rows x 6 columns]
+{
+ "train_rows": 161546,
+ "test_rows": 115034,
+ "paid_rate_train": 0.7650452502692732,
+ "paid_rate_test": 0.8364396613175236,
+ "high_sev_rate_train": 0.07650452502692731,
+ "high_sev_rate_test": 0.1385764208842603,
+ "paid_claims_train": 123590,
+ "paid_claims_test": 96219
+}
+                                 target feature_set    metric
+0   T1_reg_log_total_paid (paid claims)           A  0.331872
+2   T1_reg_log_total_paid (paid claims)           B  0.956940
+4   T1_reg_log_total_paid (paid claims)        LEAK  0.997748
+5                        T2_cls_is_paid           A  0.768136
+7                        T2_cls_is_paid           B  0.990281
+9                        T2_cls_is_paid        LEAK  0.999957
+10                 T3_cls_high_severity           A  0.860198
+12                 T3_cls_high_severity           B  0.994660
+14                 T3_cls_high_severity        LEAK  0.999930

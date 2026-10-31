@@ -1,0 +1,85 @@
+column,raw_dtype,dtype_for_analysis,n_missing,missing_pct,n_unique,top_value,top_value_share_of_nonnull,flag_all_null,flag_constant,flag_near_constant_ge99pct,flag_high_cardinality,min,max,p01,median,mean,p99,std,skew,n_negative,n_zero,n_outlier_iqr3
+agricultureStructureIndicator,bool,bool,0,0.0,2,False,99.97,False,False,True,False,,,,,,,,,,,
+asOfDate,"datetime64[us, UTC]","datetime64[us, UTC]",0,0.0,1,2026-09-08 00:00:00+00:00,100.0,False,True,False,False,2026-09-08 00:00:00+00:00,2026-09-08 00:00:00+00:00,,,,,,,,,
+basementEnclosureCrawlspaceType,float64,float64,134956,48.71,4,0.0,75.66,False,False,False,False,0.0,4.0,0.0,0.0,0.4535568740894022,4.0,0.927405243315744,2.249679900201266,0.0,107494.0,
+policyCount,int16,int16,0,0.0,258,1,95.36,False,False,False,False,1,1090,1.0,1.0,1.891568874466219,22.0,9.95859519938659,35.357086194525216,0.0,0.0,
+crsClassCode,float64,float64,82442,29.76,10,5.0,57.6,False,False,False,False,1.0,10.0,2.0,5.0,5.710783129743924,10.0,1.422391765204459,0.8344308655511442,0.0,0.0,6043.0
+dateOfLoss,object,datetime64[s],0,0.0,2176,2024-09-26,16.18,False,False,False,False,2020-01-01 00:00:00,2025-12-31 00:00:00,,,,,,,,,
+elevatedBuildingIndicator,bool,bool,0,0.0,2,False,79.38,False,False,False,False,,,,,,,,,,,
+elevationCertificateIndicator,str,str,242913,87.68,9,3,48.9,False,False,False,False,,,,,,,,,,,
+elevationDifference,float64,float64,182406,65.84,107,0.0,19.82,False,False,False,False,-9980.0,987.0,-9.0,0.0,0.1379204666744164,9.0,47.32097763613152,-198.56936029681532,29190.0,18759.0,275.0
+baseFloodElevation,object,float64,182949,66.04,4535,7.0,13.53,False,False,False,False,-13.8,9990.0,-5.0,9.0,180.58143573827644,9990.0,1063.5979604837466,8.43112203880112,1990.0,643.0,13622.0
+ratedFloodZone,str,str,53,0.02,52,AE,69.48,False,False,False,False,,,,,,,,,,,
+houseWorship,bool,bool,0,0.0,2,False,99.89,False,False,True,False,,,,,,,,,,,
+locationOfContents,float64,float64,124573,44.97,7,3.0,54.07,False,False,False,False,1.0,7.0,2.0,3.0,3.645684113865932,7.0,1.4135808194190256,1.4458238471515168,0.0,0.0,0.0
+lowestAdjacentGrade,object,float64,178653,64.49,6068,0.0,3.26,False,False,False,False,-99999.9,9998.9,-5.2,6.0,66.69536796096769,1822.4939999999885,986.5049476043203,-84.2919138489993,2109.0,3209.0,14101.0
+lowestFloorElevation,object,float64,177876,64.21,6054,0.0,1.46,False,False,False,False,-9999.0,9998.9,-3.3,9.9,90.60799439273072,1993.0,510.20343236967705,13.282773836366957,1782.0,1452.0,11851.0
+numberOfFloorsInTheInsuredBuilding,float64,float64,346,0.12,6,1.0,61.19,False,False,False,False,1.0,6.0,1.0,1.0,1.547271827010304,5.0,0.8539025111146379,2.0562877917537032,0.0,0.0,22.0
+nonProfitIndicator,bool,bool,0,0.0,2,False,99.2,False,False,True,False,,,,,,,,,,,
+obstructionType,float64,float64,217295,78.44,19,10.0,31.82,False,False,False,False,10.0,98.0,10.0,50.0,35.518430479761626,92.0,24.645218921244673,0.4521214074179642,0.0,0.0,0.0
+occupancyType,float64,float64,0,0.0,14,11.0,67.89,False,False,False,False,1.0,19.0,1.0,11.0,11.079885789779556,18.0,3.724267767603968,-1.1069134603554447,0.0,0.0,
+originalConstructionDate,object,datetime64[s],1962,0.71,17411,1970-01-01,1.87,False,False,False,False,1069-01-01 00:00:00,2026-03-17 00:00:00,,,,,,,,,
+originalNBDate,object,datetime64[s],51,0.02,13121,2000-01-01,1.65,False,False,False,False,0998-09-21 00:00:00,2026-10-20 00:00:00,,,,,,,,,
+amountPaidOnBuildingClaim,object,float64,21744,7.85,195669,0.0,16.56,False,False,False,False,-2250000.0,10741476.93,0.0,23908.38,63777.601825852274,500000.0,141643.81794329057,18.034706049510515,35.0,42288.0,4307.0
+amountPaidOnContentsClaim,object,float64,21744,7.85,71148,0.0,64.16,False,False,False,False,-80000.0,757048.95,0.0,0.0,8903.871290459048,100000.0,25606.805781025458,8.887962597883998,18.0,163786.0,30548.0
+amountPaidOnIncreasedCostOfComplianceClaim,object,float64,21744,7.85,449,0.0,99.59,False,False,True,False,0.0,900000.0,0.0,0.0,94.11404463177028,0.0,2522.5203057618946,208.53303257109707,0.0,254244.0,
+postFIRMConstructionIndicator,bool,bool,0,0.0,2,False,66.95,False,False,False,False,,,,,,,,,,,
+rateMethod,str,str,0,0.0,15,RE,89.87,False,False,False,False,,,,,,,,,,,
+smallBusinessIndicatorBuilding,bool,bool,0,0.0,2,False,97.27,False,False,False,False,,,,,,,,,,,
+totalBuildingInsuranceCoverage,float64,float64,0,0.0,4138,250000.0,52.77,False,False,False,False,0.0,272500000.0,0.0,250000.0,414004.7225420798,5000000.0,2320315.5261844825,38.36222595587233,0.0,6518.0,24054.0
+totalContentsInsuranceCoverage,float64,float64,1,0.0,1175,0.0,29.29,False,False,False,False,0.0,500000.0,0.0,40000.0,52286.38316151203,426000.0,64571.2454509007,3.6097259825819124,0.0,81144.0,2850.0
+yearOfLoss,int16,int16,0,0.0,6,2024,36.84,False,False,False,False,2020,2025,2020.0,2022.0,2022.5492414261116,2025.0,1.5247490502835876,-0.23047293019155704,0.0,0.0,0.0
+primaryResidenceIndicator,bool,bool,0,0.0,2,True,66.77,False,False,False,False,,,,,,,,,,,
+buildingDamageAmount,float64,float64,30572,11.04,114064,0.0,10.21,False,False,False,False,0.0,52840990.0,0.0,26926.0,68031.5359914956,523352.19999999995,215136.81841490435,95.78168076572116,0.0,25170.0,4753.0
+buildingDeductibleCode,str,str,6774,2.45,14,F,31.69,False,False,False,False,,,,,,,,,,,
+netBuildingPaymentAmount,object,float64,0,0.0,195650,0.0,23.15,False,False,False,False,-2250000.0,10741476.93,0.0,18256.73,58734.42029270881,488475.75479999994,137012.80152570002,18.46160661039013,38.0,64128.0,4548.0
+buildingPropertyValue,float64,float64,30572,11.04,169043,0.0,11.3,False,False,False,False,0.0,526308898.0,0.0,204166.0,592526.471774439,7388194.599999996,4446314.0650007455,48.46153444088948,0.0,27847.0,16829.0
+causeOfDamage,str,str,3579,1.29,12,4,47.78,False,False,False,False,,,,,,,,,,,
+condominiumCoverageTypeCode,str,str,347,0.13,5,N,90.79,False,False,False,False,,,,,,,,,,,
+contentsDamageAmount,float64,float64,104598,37.76,47609,0.0,38.56,False,False,False,False,0.0,16741290.0,0.0,2029.0,18587.56855626758,129398.46000000011,143480.03249436352,57.718546631969495,0.0,66493.0,8155.0
+contentsDeductibleCode,str,str,78928,28.49,14,1,47.36,False,False,False,False,,,,,,,,,,,
+netContentsPaymentAmount,object,float64,0,0.0,71140,0.0,66.98,False,False,False,False,-80000.0,757048.95,0.0,0.0,8202.495670876753,100000.0,24693.339217889585,9.21258091184067,18.0,185549.0,39408.0
+contentsPropertyValue,float64,float64,104598,37.76,36824,0.0,38.34,False,False,False,False,-1.0,250000000.0,0.0,40000.0,109935.79998840143,915508.5400000004,989159.660414641,126.70830157180289,1.0,66107.0,6863.0
+disasterAssistanceCoverageRequired,float64,float64,184287,66.52,5,0.0,99.42,False,False,True,False,0.0,5.0,0.0,0.0,0.015580186746598236,0.0,0.2518032786815767,18.74076979215938,0.0,92209.0,
+eventDesignationNumber,str,str,92861,33.52,67,FL0124,29.69,False,False,False,False,,,,,,,,,,,
+ficoNumber,float64,float64,277033,100.0,0,,,True,False,False,False,,,,,,,,,,,
+floodCharacteristicsIndicator,float64,float64,277033,100.0,0,,,True,False,False,False,,,,,,,,,,,
+floodWaterDuration,float64,float64,261438,94.37,38,0.0,82.38,False,False,False,False,0.0,127.0,0.0,0.0,0.37691567810195575,5.0,1.9500050092199404,26.305386632484286,0.0,12847.0,
+floodproofedIndicator,bool,bool,0,0.0,2,False,100.0,False,False,True,False,,,,,,,,,,,
+floodEvent,str,str,56474,20.39,68,Hurricane Helene,26.34,False,False,False,False,,,,,,,,,,,
+iccCoverage,float64,float64,14073,5.08,1,30000.0,100.0,False,True,False,False,30000.0,30000.0,30000.0,30000.0,30000.0,30000.0,0.0,,0.0,0.0,
+netIccPaymentAmount,object,float64,0,0.0,450,0.0,99.62,False,False,True,False,0.0,900000.0,0.0,0.0,86.66162637664107,0.0,2421.23044761907,217.31136322739346,0.0,275988.0,
+nfipRatedCommunityNumber,str,str,3,0.0,7884,125124,6.75,False,False,False,True,,,,,,,,,,,
+nfipCommunityNumberCurrent,str,str,55869,20.17,7293,125124,7.09,False,False,False,True,,,,,,,,,,,
+nfipCommunityName,str,str,7,0.0,6775,LEE COUNTY*,6.75,False,False,False,True,,,,,,,,,,,
+nonPaymentReasonContents,str,str,179804,64.9,23,97,32.79,False,False,False,False,,,,,,,,,,,
+nonPaymentReasonBuilding,str,str,222102,80.17,23,06,22.85,False,False,False,False,,,,,,,,,,,
+numberOfUnits,float64,float64,2731,0.99,340,1.0,81.88,False,False,False,False,0.0,34970.0,0.0,1.0,2.9321149681737646,41.0,69.73892456126495,462.0096273630633,0.0,14569.0,
+buildingReplacementCost,float64,float64,30572,11.04,175285,0.0,11.12,False,False,False,False,0.0,1673931037.0,0.0,266230.0,823647.2107432819,9906102.599999966,8593965.446574079,100.69648834084067,0.0,27415.0,17185.0
+contentsReplacementCost,float64,float64,104599,37.76,6316,0.0,85.84,False,False,False,False,-1.0,100000000.0,0.0,0.0,16928.358641567207,219824.30000000115,300166.06741126394,254.92564147760038,1.0,148015.0,
+replacementCostBasis,str,str,1628,0.59,2,A,68.56,False,False,False,False,,,,,,,,,,,
+stateOwnedIndicator,bool,bool,0,0.0,2,False,99.97,False,False,True,False,,,,,,,,,,,
+waterDepth,float64,float64,41684,15.05,260,0.0,37.47,False,False,False,False,-207.0,800.0,-8.0,1.0,6.9050856387747555,99.0,23.074620058409266,3.652661225328843,12428.0,88183.0,27339.0
+floodZoneCurrent,str,str,55968,20.2,51,AE,66.79,False,False,False,False,,,,,,,,,,,
+buildingDescriptionCode,float64,float64,73163,26.41,18,1.0,92.71,False,False,False,False,1.0,21.0,1.0,1.0,1.4836121057536666,8.0,1.7951936434871913,3.6065019759226526,0.0,0.0,
+rentalPropertyIndicator,bool,bool,0,0.0,2,False,92.48,False,False,False,False,,,,,,,,,,,
+state,str,str,0,0.0,56,FL,55.13,False,False,False,False,,,,,,,,,,,
+reportedCity,str,str,0,0.0,1,Currently Unavailable,100.0,False,True,False,False,,,,,,,,,,,
+reportedZipCode,str,str,0,0.0,11898,33908,2.72,False,False,False,True,,,,,,,,,,,
+countyCode,str,str,450,0.16,2235,12071,13.23,False,False,False,True,,,,,,,,,,,
+censusGeoid,str,str,2520,0.91,39628,120150303013,0.34,False,False,False,True,,,,,,,,,,,
+latitude,object,float64,1826,0.66,298,27.8,5.85,False,False,False,False,-14.3,66.9,25.8,28.8,30.99730421101208,45.5,5.447636025057034,1.2146174608600875,1.0,0.0,141.0
+longitude,object,float64,1826,0.66,619,-82.6,6.81,False,False,False,False,-170.6,144.8,-122.3,-82.5,-84.35617226306017,-71.2,8.939642837463555,-1.4080454888828953,275185.0,0.0,8599.0
+foundationType,str,str,0,0.0,7,1,55.54,False,False,False,False,,,,,,,,,,,
+openDate,object,datetime64[s],0,0.0,2279,2024-09-27,6.68,False,False,False,False,2020-01-02 00:00:00,2026-09-04 00:00:00,,,,,,,,,
+mostRecentRecoveryDate,object,datetime64[s],276630,99.85,274,2024-12-23,1.24,False,False,False,False,2020-06-10 00:00:00,2026-09-02 00:00:00,,,,,,,,,
+exteriorWaterDepth,float64,float64,48642,17.56,438,0.0,17.96,False,False,False,False,-239.0,9600.0,0.0,15.0,33.8990109067345,999.0,135.6933616008254,21.202961129556165,366.0,41017.0,5780.0
+interiorWaterDepth,float64,float64,97719,35.27,380,0.0,37.6,False,False,False,False,-296.0,1380.0,-89.0,2.0,24.29973119778712,999.0,133.29087914974536,6.950234345013255,7604.0,67429.0,14494.0
+mostRecentPaymentDate,object,datetime64[s],21744,7.85,2317,2024-12-08,0.73,False,False,False,False,1900-01-01 00:00:00,2026-09-08 00:00:00,,,,,,,,,
+preFirmIndicator,bool,bool,0,0.0,2,False,75.74,False,False,False,False,,,,,,,,,,,
+totalSalvageRecovery,object,float64,276630,99.85,33,0.0,92.06,False,False,False,False,0.0,102265.27,0.0,0.0,2853.217568238214,74635.36120000003,12836.618868598644,5.291373904686371,0.0,371.0,
+totalBldgClaimPmtRecovery,object,float64,276630,99.85,219,0.0,21.59,False,False,False,False,0.0,1000000.0,0.0,7500.0,25676.266923076924,199586.56860000038,64575.51790296202,9.926526136349615,0.0,87.0,21.0
+totalContentsClaimPmtRecovery,object,float64,276630,99.85,53,0.0,84.62,False,False,False,False,0.0,100000.0,0.0,0.0,1733.0389081885855,27487.279800000022,7502.356339636394,8.309321591483233,0.0,341.0,
+totalIccClaimPmtRecovery,object,float64,276630,99.85,3,0.0,99.5,False,False,True,False,0.0,12000.0,0.0,0.0,45.03722084367246,0.0,671.0151855272557,15.960544230199337,0.0,401.0,
+totalSubrogationRecovery,object,float64,276630,99.85,3,0.0,99.5,False,False,True,False,0.0,6209.69,0.0,0.0,21.61213399503722,0.0,333.166680636704,16.983640392018945,0.0,401.0,
+id,int64,int64,0,0.0,277033,5448679,0.0,False,False,False,False,5448679,8174649,5475911.68,6811248.0,6812005.725704158,8146994.68,787873.3870282104,-0.000536078222625177,0.0,0.0,0.0

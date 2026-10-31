@@ -1,0 +1,29 @@
+{
+  "raw_path": "/Users/home/workspace/School/DataMining/project/NfipClaimsV3.parquet",
+  "raw_bytes": 163839193,
+  "rows": 276570,
+  "python": "3.13.9",
+  "sklearn": "1.7.2",
+  "numpy": "2.3.5",
+  "pandas": "2.3.3",
+  "seed": 42,
+  "target_cutoff_train_2020_2023": 84724.20000000001,
+  "target_cutoff_all_years": 106127.0,
+  "old_label_disagreements_with_train_cutoff": 16780,
+  "unknown_building_payments": 21558,
+  "unknown_payment_positive_net": 0,
+  "paid_above_building_coverage": 665,
+  "selection_protocol": "two forward folds: <=2021 -> 2022 and <=2022 -> 2023; choose mean validation dollar R2; refit <=2023; test 2024-25",
+  "limitations": [
+    "cohort uses existing deduplication keys; snapshot features are not point-in-time verified",
+    "2024-25 already inspected in historical notebooks; this is an audited retrospective comparison, not a fresh prospective holdout"
+  ],
+  "selected_regression": "direct_poisson",
+  "selected_classification": "unweighted_hgb",
+  "classification_fit_through": 2022,
+  "classification_calibration_year": 2023,
+  "classification_f1_threshold": 0.22999999999999998,
+  "classification_80pct_precision_threshold": null,
+  "classification_calibration_warning": "calibration and threshold share 2023; all reported final metrics use 2024-25, not calibration-fit scores",
+  "runtime_seconds": 1179.1289060115814
+}

@@ -1,0 +1,209 @@
+[
+  {
+    "path": "class_workbooks/Code_from_lecture_03.ipynb",
+    "sha256": "600f506cef6e64a6d65663c074db1d07f9c6bd4725a7444f3b0a2e169ef5346c",
+    "cells": 86,
+    "code_cells": 55,
+    "unexecuted_code_cells": 55,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_04.ipynb",
+    "sha256": "89bd702381c0cf537c305b156921b536b7ddbed6ed5ed92d2a89d91c7352def1",
+    "cells": 48,
+    "code_cells": 33,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_05.ipynb",
+    "sha256": "534567e5b50781ca8e7ce9801d8db2a9ba931703bfc95f4750cf79dfe2d293de",
+    "cells": 44,
+    "code_cells": 26,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_06.ipynb",
+    "sha256": "1de1707772b8aea76dc63365c3525086f8ff0da0592e0b7b0a1a5ea21b2b2c98",
+    "cells": 30,
+    "code_cells": 20,
+    "unexecuted_code_cells": 8,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_07.ipynb",
+    "sha256": "bb796abf610d492ca8d20a402e7062a504985c1cd07f923561c5de771e1cefc7",
+    "cells": 53,
+    "code_cells": 32,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_08.ipynb",
+    "sha256": "f079c85cb59b13f3c16694a0a0a8cbe5ca3a48b29efaa993863ce1bcec0ec569",
+    "cells": 41,
+    "code_cells": 24,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_09.ipynb",
+    "sha256": "9b07861f7231383272387f48cf6b048996ba531a91e4c7a2a1a1eed6881f300e",
+    "cells": 30,
+    "code_cells": 18,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_10.ipynb",
+    "sha256": "6d9f1831db51afbb9501a78bb17194874bcf97858113a8b006e80ff6d01e4c50",
+    "cells": 34,
+    "code_cells": 21,
+    "unexecuted_code_cells": 1,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "class_workbooks/Code_from_lecture_11.ipynb",
+    "sha256": "f18586ad4e771469ee682f5cb6368df7c3bfc0b3bc5d71f134a3a6028e830e67",
+    "cells": 32,
+    "code_cells": 20,
+    "unexecuted_code_cells": 20,
+    "saved_errors": [],
+    "role": "lecture reference"
+  },
+  {
+    "path": "florida_peninsula/florida_peninsula_analysis.ipynb",
+    "sha256": "4222bdfa6c7a81b7b870a1a021b4ad87bab9dc0854768ab1ed676860b3bb0dd0",
+    "cells": 50,
+    "code_cells": 26,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "gulf_coast/gulf_coast_analysis.ipynb",
+    "sha256": "647f6bbd23250ad34092a735663f50e6fb43588d989feee938c76df903c8efbb",
+    "cells": 50,
+    "code_cells": 26,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "mid_atlantic_northeast/mid_atlantic_northeast_analysis.ipynb",
+    "sha256": "46a4dbddf07251838a0dd0382451f603eaec5cc4cb757022a5160496f9ff48a9",
+    "cells": 50,
+    "code_cells": 26,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/01_EDA_NFIP_claims.ipynb",
+    "sha256": "9990d9a26955510af8eddd17bf5c2c95ac21c28389ba67a126dc043ba99fb31d",
+    "cells": 85,
+    "code_cells": 43,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/02_feature_selection.ipynb",
+    "sha256": "b8a11d4cfa7ece29940c2643994202f8911f3e0b46ec84d876389e156646c426",
+    "cells": 32,
+    "code_cells": 16,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/03_EDA_and_feature_selection_simple.ipynb",
+    "sha256": "56d3e136fc27037d66bcedb26b6e50880aa99b18190768b7063735692ae7027f",
+    "cells": 97,
+    "code_cells": 55,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/04_research_questions.ipynb",
+    "sha256": "18057cda3a7dfc1628205f24f3aa29bc32259f3794722913aec1834197c5b7dd",
+    "cells": 52,
+    "code_cells": 25,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/05_rq1_feature_search.ipynb",
+    "sha256": "23c21fe92f0479128fa6d10aa8d42a965b87c1d5f91034bf968ef37d5dee2e9d",
+    "cells": 18,
+    "code_cells": 9,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/05_rq3_check.ipynb",
+    "sha256": "7e6dd47fa069bd1b1372a29943a0bcc9cd0c5997d846bb38e5b3990c74e8ba73",
+    "cells": 30,
+    "code_cells": 12,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/06_rq1_national_and_regional.ipynb",
+    "sha256": "c158bb9d91ee73134c6fd8d4fa89ca2244967f616cfc169cd6311866720d7fc3",
+    "cells": 31,
+    "code_cells": 16,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/07_clusters_that_separate.ipynb",
+    "sha256": "c32a4cbfd25c6bc2bcd43ec94129b576448ae0836d06a4e44b56257f56dba328",
+    "cells": 17,
+    "code_cells": 6,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/08_claim_archetypes.ipynb",
+    "sha256": "38b1b44bfaee10e4cf5515f52ea3f543c5a04c5d7e037ef5fa3c49385afeb36e",
+    "cells": 31,
+    "code_cells": 17,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "notebooks/09_association_rules.ipynb",
+    "sha256": "c0be3530d25ebbd5e2786221f203dba31e4093e49b41e7008ed39b39833a7816",
+    "cells": 25,
+    "code_cells": 15,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  },
+  {
+    "path": "regional_analysis/regional_research_questions.ipynb",
+    "sha256": "5c4136454b613da06138bf793354c472b9cde081924a4e0bae39ffce1b79741a",
+    "cells": 32,
+    "code_cells": 16,
+    "unexecuted_code_cells": 0,
+    "saved_errors": [],
+    "role": "NFIP analysis"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "bulk_file": "https://www.fema.gov/about/reports-and-data/openfema/v3/NfipClaimsV3.parquet",
+  "total_rows_full_dataset": 2725989,
+  "total_columns": 84,
+  "dateOfLoss_min_full": "1978-01-01",
+  "dateOfLoss_max_full": "2026-09-07",
+  "rows_dateOfLoss_null": 0,
+  "rows_in_2020_2025_by_dateOfLoss": 277033,
+  "rows_in_2020_2025_by_yearOfLoss": 277033,
+  "rows_where_yearOfLoss_ne_year_of_dateOfLoss": 0,
+  "per_yearOfLoss": {
+    "2020": 33185,
+    "2021": 46699,
+    "2022": 60262,
+    "2023": 21690,
+    "2024": 102054,
+    "2025": 13143
+  },
+  "asOfDate_values": [
+    "2026-09-08 00:00:00+00:00"
+  ],
+  "api_count_same_filter": 277033,
+  "raw_filtered_file": "raw/nfip_claims_2020_2025_raw.parquet"
+}

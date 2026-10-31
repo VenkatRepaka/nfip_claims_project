@@ -1,0 +1,14 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W20261021 10:33:13.462435 1801908224 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+W20261021 10:33:13.463411 1801908224 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+W20261021 10:33:13.463558 1801908224 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+W20261021 10:33:13.463655 1801908224 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+VALIDATION RANKING model
+direct_poisson                   0.159925
+direct_squared_coords            0.063925
+log_squared                      0.048340
+direct_squared                   0.029945
+bounded_ratio_poisson           -0.805425
+bounded_ratio_squared_error     -0.956258
+coverage_ratio_squared         -58.544441
+coverage_ratio_poisson        -127.744726

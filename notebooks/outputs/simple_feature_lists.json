@@ -1,0 +1,82 @@
+{
+  "NOMINAL_FEATURES": [
+    "flood_zone_family",
+    "foundationType",
+    "occupancyType",
+    "state_group",
+    "basementEnclosureCrawlspaceType",
+    "obstructionType",
+    "condominiumCoverageTypeCode",
+    "numberOfFloorsInTheInsuredBuilding"
+  ],
+  "NUMERIC_FEATURES": [
+    "totalBuildingInsuranceCoverage",
+    "totalContentsInsuranceCoverage",
+    "policyCount",
+    "numberOfUnits",
+    "building_age",
+    "report_lag_days",
+    "crsClassCode",
+    "bldg_deductible_usd",
+    "loss_month",
+    "latitude",
+    "longitude",
+    "elevatedBuildingIndicator",
+    "postFIRMConstructionIndicator",
+    "primaryResidenceIndicator",
+    "rentalPropertyIndicator",
+    "smallBusinessIndicatorBuilding",
+    "nonProfitIndicator",
+    "is_named_event",
+    "crsClassCode_missing"
+  ],
+  "LOG_COLS": [
+    "totalBuildingInsuranceCoverage",
+    "totalContentsInsuranceCoverage",
+    "policyCount",
+    "numberOfUnits"
+  ],
+  "RQ1": [
+    "foundationType_1",
+    "totalBuildingInsuranceCoverage",
+    "latitude",
+    "building_age",
+    "longitude",
+    "loss_month",
+    "report_lag_days",
+    "postFIRMConstructionIndicator",
+    "bldg_deductible_usd",
+    "is_named_event",
+    "totalContentsInsuranceCoverage",
+    "elevatedBuildingIndicator",
+    "numberOfUnits",
+    "flood_zone_family_AE",
+    "flood_zone_family_X"
+  ],
+  "RQ2": [
+    "totalBuildingInsuranceCoverage",
+    "latitude",
+    "state_group_FL",
+    "foundationType_1",
+    "building_age",
+    "loss_month",
+    "longitude",
+    "bldg_deductible_usd",
+    "report_lag_days",
+    "is_named_event",
+    "elevatedBuildingIndicator",
+    "totalContentsInsuranceCoverage",
+    "postFIRMConstructionIndicator",
+    "crsClassCode",
+    "numberOfUnits"
+  ],
+  "RQ3": [
+    "flood_zone_family",
+    "foundationType",
+    "building_age",
+    "numberOfFloorsInTheInsuredBuilding",
+    "occupancyType",
+    "crsClassCode",
+    "totalBuildingInsuranceCoverage"
+  ]
+}
