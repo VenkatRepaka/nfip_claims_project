@@ -23,8 +23,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import requests
+from project_utils import raw_path
 
-RAW_FILE = '/Users/home/workspace/School/DataMining/project/NfipClaimsV3.parquet'   # same as notebook 01
+RAW_FILE = raw_path()   # shared path; set NFIP_RAW_FILE for another machine
 HURDAT_URL = 'https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2025-092326.txt'
 CENTERS_URL = 'https://www2.census.gov/geo/docs/reference/cenpop2020/blkgrp/CenPop2020_Mean_BG.txt'
 DATA = Path('data')
@@ -72,7 +73,7 @@ def claim_locations():
     centers = pd.read_csv(CENTERS_URL, dtype=str, encoding='utf-8-sig')
     centers['censusGeoid'] = centers.STATEFP + centers.COUNTYFP + centers.TRACTCE + centers.BLKGRPCE
     centers[['bg_lat', 'bg_lon']] = centers[['LATITUDE', 'LONGITUDE']].astype(float)
-    claims = claims.merge(geoid, on='id', how='left').merge(centers[['censusGeoid', 'bg_lat', 'bg_lon']], on='censusGeoid', how='left')
+    claims = claims.merge(geoid, on='id', how='left', validate='one_to_one').merge(centers[['censusGeoid', 'bg_lat', 'bg_lon']], on='censusGeoid', how='left', validate='many_to_one')
     claims['lat'] = claims.bg_lat.fillna(claims.latitude)
     claims['lon'] = claims.bg_lon.fillna(claims.longitude)
     return claims[['id', 'dateOfLoss', 'lat', 'lon']]
@@ -87,6 +88,10 @@ def km_between(lat1, lon1, lat2, lon2):
 def track_features(claims, tracks):
     out = []
     for day, day_claims in claims.groupby('dateOfLoss'):
+        invalid = day_claims[['lat', 'lon']].isna().any(axis=1)
+        day_claims = day_claims.loc[~invalid]
+        if day_claims.empty:
+            continue
         window = tracks[(tracks.time >= day - pd.Timedelta(days=2)) & (tracks.time < day + pd.Timedelta(days=2))]
         if window.empty:
             out.append(day_claims[['id']])
@@ -102,11 +107,24 @@ def track_features(claims, tracks):
         cross = near.dlon.values * (f.lat.values - near.lat.values) - near.dlat.values * (f.lon.values - near.lon.values)
         f['trk_right_side'] = (cross < 0).astype(float)
         out.append(day_claims[['id', 'lat', 'lon']].merge(f, on=['lat', 'lon'], how='left').drop(columns=['lat', 'lon']))
+    columns = ['trk_dist_km', 'trk_wind_kt', 'trk_maxwind_200km', 'trk_r34_km',
+               'trk_pres_mb', 'trk_right_side']
+    if not out:
+        empty = claims[['id']].copy()
+        for col in columns + ['trk_inside_r34', 'trk_storm']:
+            empty[col] = np.nan
+        return empty
     feat = pd.concat(out, ignore_index=True)
+    for col in columns:
+        if col not in feat:
+            feat[col] = np.nan
+    if 'trk_storm' not in feat:
+        feat['trk_storm'] = np.nan
     feat['trk_inside_r34'] = (feat.trk_dist_km <= feat.trk_r34_km.fillna(0)).astype(float)
     feat['trk_dist_km'] = feat.trk_dist_km.fillna(NO_STORM_KM)
     feat[['trk_wind_kt', 'trk_maxwind_200km']] = feat[['trk_wind_kt', 'trk_maxwind_200km']].fillna(0)
-    return feat
+    # Retain unknown locations as missing features, rather than "no hurricane".
+    return claims[['id']].merge(feat, on='id', how='left', validate='one_to_one')
 
 
 if __name__ == '__main__':

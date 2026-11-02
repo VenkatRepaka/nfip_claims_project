@@ -31,8 +31,9 @@ import numpy as np
 import pandas as pd
 import requests
 import tifffile
+from project_utils import raw_path
 
-RAW_FILE = '/Users/home/workspace/School/DataMining/project/NfipClaimsV3.parquet'   # same as notebook 01
+RAW_FILE = raw_path()   # shared path; set NFIP_RAW_FILE for another machine
 CENTERS_URL = 'https://www2.census.gov/geo/docs/reference/cenpop2020/blkgrp/CenPop2020_Mean_BG.txt'
 PRISM_URL = 'https://services.nacse.org/prism/data/get/us/4km/ppt/{:%Y%m%d}'
 DATA = Path('data')
@@ -48,12 +49,13 @@ def claim_cells():
     centers = pd.read_csv(CENTERS_URL, dtype=str, encoding='utf-8-sig')
     centers['censusGeoid'] = centers.STATEFP + centers.COUNTYFP + centers.TRACTCE + centers.BLKGRPCE
     centers[['bg_lat', 'bg_lon']] = centers[['LATITUDE', 'LONGITUDE']].astype(float)
-    claims = claims.merge(geoid, on='id', how='left').merge(centers[['censusGeoid', 'bg_lat', 'bg_lon']], on='censusGeoid', how='left')
+    claims = claims.merge(geoid, on='id', how='left', validate='one_to_one').merge(centers[['censusGeoid', 'bg_lat', 'bg_lon']], on='censusGeoid', how='left', validate='many_to_one')
     claims['rain_location'] = np.where(claims.bg_lat.notna(), 'block group', 'rounded lat/lon')
     lat = claims.bg_lat.fillna(claims.latitude)
     lon = claims.bg_lon.fillna(claims.longitude)
-    claims['row'] = np.floor((Y0 - lat) / RES).astype(int)
-    claims['col'] = np.floor((lon - X0) / RES).astype(int)
+    # Missing locations must not be filled with a made-up median coordinate.
+    claims['row'] = np.floor((Y0 - lat) / RES).fillna(-1).astype(int)
+    claims['col'] = np.floor((lon - X0) / RES).fillna(-1).astype(int)
     # keep one cell of margin for the 3x3 neighbourhood; outside the grid = not in the lower 48 states
     claims['on_grid'] = claims.row.between(1, N_ROWS - 2) & claims.col.between(1, N_COLS - 2)
     return claims
